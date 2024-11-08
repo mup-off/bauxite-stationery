@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
 *, *:before, *:after {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -65,7 +66,6 @@ body, button, input {
   background: white;
 }
 
-
 .screen-body {
   display: flex;
 }
@@ -95,7 +95,6 @@ body, button, input {
   position: absolute;
   left: 0;
   bottom: -10px;
-  width: px;
   height: 4px;
   background: rgb(119, 234, 240);
 }
@@ -158,6 +157,27 @@ body, button, input {
   margin: 0 5px;
 }
 
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+  .background {
+    margin: 0;
+    justify-content: center;
+  }
+  .container {
+    flex: 0 1 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex: 0 1 80%;
+    padding: 5px;
+  }
+  .screen-body-item {
+    padding: 30px;
+  }
+}
+
 @media screen and (max-width: 520px) {
   .screen-body {
     flex-direction: column;
@@ -169,6 +189,7 @@ body, button, input {
 
   .app-title {
     flex-direction: row;
+    font-size: 22px;
   }
 
   .app-title span {
@@ -182,10 +203,26 @@ body, button, input {
 
 @media screen and (max-width: 600px) {
   .screen-body {
-    padding: 40px;
+    padding: 20px;
   }
 
   .screen-body-item {
     padding: 0;
+  }
+
+  .app-form-control {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .app-title {
+    font-size: 18px;
+  }
+  .screen-header {
+    padding: 5px 10px;
+  }
+  .screen-body-item {
+    padding: 10px;
   }
 }
